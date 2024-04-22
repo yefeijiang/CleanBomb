@@ -26,7 +26,6 @@ __published:	// IDE-managed Components
     void __fastcall UpDown3Changing(TObject *Sender, bool &AllowChange);
     void __fastcall Edit2KeyPress(TObject *Sender, char &Key);
     void __fastcall Button1Click(TObject *Sender);
-    void __fastcall FormPaint(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
     __fastcall Tset_bomb(TComponent* Owner);

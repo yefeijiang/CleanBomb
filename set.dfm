@@ -1,19 +1,17 @@
 object set_bomb: Tset_bomb
   Left = 324
   Top = 277
-  Width = 239
-  Height = 168
   BorderIcons = [biSystemMenu]
   Caption = #33258#23450#20041#35774#32622'...'
+  ClientHeight = 130
+  ClientWidth = 227
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
-  OnPaint = FormPaint
-  PixelsPerInch = 96
+  Position = poMainFormCenter
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -49,7 +47,6 @@ object set_bomb: Tset_bomb
     Max = 50
     Position = 15
     TabOrder = 0
-    Wrap = False
   end
   object Edit1: TEdit
     Left = 70
@@ -70,7 +67,6 @@ object set_bomb: Tset_bomb
     Max = 30
     Position = 15
     TabOrder = 2
-    Wrap = False
   end
   object Edit2: TEdit
     Left = 70
@@ -90,7 +86,6 @@ object set_bomb: Tset_bomb
     Min = 10
     Position = 40
     TabOrder = 4
-    Wrap = False
     OnChanging = UpDown3Changing
   end
   object Edit3: TEdit

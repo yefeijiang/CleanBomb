@@ -17,6 +17,7 @@
 #include <jpeg.hpp>
 #include <Registry.hpp>
 #include <Buttons.hpp>
+#include <System.ImageList.hpp>
 //---------------------------------------------------------------------------
 #define WIDTH 12
 #define HEIGHT 12
@@ -31,7 +32,7 @@ public:
     bool opened;      //是否已经打开
     int are_you_bomb;  //是否是雷
     bool bombed;        //是否已经爆
-    AnsiString state;   //类型
+    UnicodeString state;   //类型
 
     int x_position;   //x轴坐标
     int y_position;   //y轴坐标
@@ -42,7 +43,7 @@ public:
 } ;
 
 
-class TCleanBomb : public TForm
+class TCleanBomb_main_windows : public TForm
 {
 __published:	// IDE-managed Components
     TMainMenu *MainMenu1;
@@ -57,7 +58,6 @@ __published:	// IDE-managed Components
     TMenuItem *N8;
     TMenuItem *N9;
     TMenuItem *N10;
-    TMenuItem *N11;
     TTimer *Timer1;
     TMenuItem *N12;
     TMenuItem *N13;
@@ -70,7 +70,6 @@ __published:	// IDE-managed Components
     void __fastcall N7Click(TObject *Sender);
     void __fastcall FormDestroy(TObject *Sender);
     void __fastcall N10Click(TObject *Sender);
-    void __fastcall N11Click(TObject *Sender);
     void __fastcall N3Click(TObject *Sender);
     void __fastcall N2Click(TObject *Sender);
     void __fastcall Timer1Timer(TObject *Sender);
@@ -86,9 +85,9 @@ __published:	// IDE-managed Components
 private:
         	// User declarations
 public:		// User declarations
-    __fastcall TCleanBomb(TComponent* Owner);
+    __fastcall TCleanBomb_main_windows(TComponent* Owner);
     void init_interface(int p_width,int p_height,int bomb_num);
-    void Draw(int i, int j, AnsiString state); //绘制所在区域,i,j表示左上角的坐标
+    void Draw(int i, int j, UnicodeString state); //绘制所在区域,i,j表示左上角的坐标
     Graphics::TBitmap *Bitmap1;
     bool Set(int p_width,int p_height,int bomb_num);
     BOMB *POS[50][30];
@@ -105,9 +104,9 @@ public:		// User declarations
     TRegistry *regkey;
     //TStringList *aList;
     TStringList * read_score();
-    void write_score(AnsiString m);
+    void write_score(UnicodeString m);
     TStringList * read_last_config();
-    void write_last_config(AnsiString con);
+    void write_last_config(UnicodeString con);
     void click_label(bool k1,bool k2,bool k3,bool k4);
     void check_log();
     bool gameover;
@@ -117,7 +116,7 @@ protected:
     END_MESSAGE_MAP(TForm)
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TCleanBomb *CleanBomb;
+extern PACKAGE TCleanBomb_main_windows *CleanBomb_main_windows;
 //---------------------------------------------------------------------------
 #endif
  
